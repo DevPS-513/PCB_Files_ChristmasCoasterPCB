@@ -1,0 +1,11 @@
+    string temp_script_file_name;  
+    if (schematic) {  
+    schematic(SCH) {  
+      // Build temporary script name  
+      temp_script_file_name = filesetext(SCH.name, "_test.scr");  
+    }  
+    }  
+    output(temp_script_file_name) {  
+    printf("INFO R1;\n");  
+    }  
+    exit("SCRIPT '" + temp_script_file_name + "';");  
